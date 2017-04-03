@@ -1,0 +1,9 @@
+.idea
+node_modules/
+coverage/
+*.log
+_ignore
+dist
+src/data/config/*.json
+src/data/content/html/
+src/data/content/template-map.js
