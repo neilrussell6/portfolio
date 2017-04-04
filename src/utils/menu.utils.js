@@ -99,6 +99,7 @@ export function populateCategoryIndices (menu, category_config) {
     let _category_index;
 
     return menu.reduce((result, item, i) => {
+
         _category_index = _category_config.reduce((result, category, category_i) => {
             return category.items.indexOf(item.to) > -1 ? category_i : result;
         }, null);

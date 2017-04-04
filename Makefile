@@ -187,14 +187,17 @@ build: sasslint jslint test
 #------------------------------
 
 build-md:
-	@find $(DIR_SRC_CONTENT_MD) -type f | awk '{ system("node $(FILE_MD2HTML) "$$1" $(DIR_SRC_CONTENT_MD) $(DIR_SRC_CONTENT_HTML)") }' ; \
+	@rm -r $(DIR_SRC_CONTENT_HTML) ; \
+	find $(DIR_SRC_CONTENT_MD) -type f | awk '{ system("node $(FILE_MD2HTML) "$$1" $(DIR_SRC_CONTENT_MD) $(DIR_SRC_CONTENT_HTML)") }' ; \
 	python dir-2-js-export/dir-2-js-export.py $(DIR_SRC_CONTENT_HTML) -e html -o $(FILE_DIR2JSEXPORT) -r $(DIR_SRC)
 
 build-md-w:
-	@find $(DIR_SRC_CONTENT_MD) -type f | awk '{ system("node $(FILE_MD2HTML) "$$1" $(DIR_SRC_CONTENT_MD) $(DIR_SRC_CONTENT_HTML)") }' ; \
+	@rm -r $(DIR_SRC_CONTENT_HTML) ; \
+	find $(DIR_SRC_CONTENT_MD) -type f | awk '{ system("node $(FILE_MD2HTML) "$$1" $(DIR_SRC_CONTENT_MD) $(DIR_SRC_CONTENT_HTML)") }' ; \
 	python dir-2-js-export/dir-2-js-export.py $(DIR_SRC_CONTENT_HTML) -e html -o $(FILE_DIR2JSEXPORT) -r $(DIR_SRC) ; \
 	while inotifywait -r -e modify $(DIR_SRC_CONTENT_MD) ; \
 		do \
+			rm -r $(DIR_SRC_CONTENT_HTML) ; \
 			find $(DIR_SRC_CONTENT_MD) -type f | awk '{ system("node $(FILE_MD2HTML) "$$1" $(DIR_SRC_CONTENT_MD) $(DIR_SRC_CONTENT_HTML)") }' ; \
 			python dir-2-js-export/dir-2-js-export.py $(DIR_SRC_CONTENT_HTML) -e html -o $(FILE_DIR2JSEXPORT) -r $(DIR_SRC) ; \
 	done
