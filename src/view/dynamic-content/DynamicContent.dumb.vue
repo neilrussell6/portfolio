@@ -8,7 +8,13 @@
 
                 <li v-for="item in menu" class="nav-item" :class="{'selected': selected_item_key === item.key}">
 
-                    <router-link :to="item.to" v-on:click.native="_onSelect(item)">{{item.label}}</router-link>
+                    <template v-if="menu[ item_i ].to === '/'">
+                        <router-link :to="menu[ item_i ].to" exact v-on:click.native="_onSelect(menu[ item_i ])">{{menu[ item_i ].label}}</router-link>
+                    </template>
+
+                    <template v-else>
+                        <router-link :to="menu[ item_i ].to" v-on:click.native="_onSelect(menu[ item_i ])">{{menu[ item_i ].label}}</router-link>
+                    </template>
 
                     <template v-if="item.hasOwnProperty('items')">
 
@@ -32,7 +38,13 @@
 
                         <li v-for="item_i in category.menu_indices" class="nav-item" :class="{'selected': selected_item_key === menu[ item_i ].key}">
 
-                            <router-link :to="menu[ item_i ].to" v-on:click.native="_onSelect(menu[ item_i ])">{{menu[ item_i ].label}}</router-link>
+                            <template v-if="menu[ item_i ].to === '/'">
+                                <router-link :to="menu[ item_i ].to" exact v-on:click.native="_onSelect(menu[ item_i ])">{{menu[ item_i ].label}}</router-link>
+                            </template>
+
+                            <template v-else>
+                                <router-link :to="menu[ item_i ].to" v-on:click.native="_onSelect(menu[ item_i ])">{{menu[ item_i ].label}}</router-link>
+                            </template>
 
                             <template v-if="menu[ item_i ].hasOwnProperty('items')">
 

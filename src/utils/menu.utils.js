@@ -42,9 +42,9 @@ export function formatMenuLabel (label, config) {
 
     // index
 
-    // if (config.label.hasOwnProperty('index') && /^Index/.test(label)) {
-    //     label = label.replace(/^Index/, 'Home');
-    // }
+    if (config.label.hasOwnProperty('index') && /^Index/.test(label)) {
+        label = label.replace(/^Index/, 'Home');
+    }
 
     // separators
 
@@ -90,7 +90,7 @@ export function populateCategoryIndices (menu, category_config) {
     let _result = category_config.map((item) => Object.assign({}, { label: item.label, menu_indices: [] }));
 
     // set uncategorised index
-    let _uncategorised_index = 0;//_result.length;
+    let _uncategorised_index = 0;
 
     // add uncategorised category
     _result = [ { label: "", menu_indices: []}, ..._result ];
@@ -100,7 +100,7 @@ export function populateCategoryIndices (menu, category_config) {
 
     return menu.reduce((result, item, i) => {
         _category_index = _category_config.reduce((result, category, category_i) => {
-            return category.items.indexOf(item.to) > -1 ? category_i : result
+            return category.items.indexOf(item.to) > -1 ? category_i : result;
         }, null);
 
         if (_category_index === null) {
@@ -133,7 +133,7 @@ export function sortMenu (menu, prop, order) {
 // --------------------------
 
 function formatLinkKey (key) {
-    return key.replace(/\_\_/g, "/").replace(/\_/g, "-");//.replace(/^index/, "");
+    return key.replace(/\_\_/g, "/").replace(/\_/g, "-").replace(/^index/, "");
 }
 
 function formatMenuItem (key, data, config = {}) {
