@@ -291,6 +291,7 @@ input {
             rgba(darken($bg-color-med, 4%), .8) 20px
         );
         position: relative;
+        display: flex;
 
         > .content {
             background-color: rgba(darken($bg-color-med, 4%), .8);
@@ -299,6 +300,7 @@ input {
             margin: $small-h-pad 0;
             padding: $med-h-pad $med-h-pad + $small-h-pad;
             min-height: 400px;
+            flex: 1 1 auto;
 
             @media screen and (min-width: $breakpoint-sm) {
                 border: 1px solid rgba($light-green, .2);
