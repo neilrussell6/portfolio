@@ -15,6 +15,7 @@
         "/sub-dir-2"
     ],
     "label": {
+        "index": "Home",
         "replacements": {
             "js": "JavaScript",
             "es6": "ES6"
