@@ -56,10 +56,19 @@ function pathMd2Html (path_in, path_out, options = {}) {
         }
 
         // custom render rules
+
+        // link
         _markdownit.renderer.rules.link_open = function (tokens, idx) {
             let _link = tokens[idx].attrs.reduce((r, attr) => attr[0] === 'href' ? attr[1] : r, null);
             _link = /^http/.test(_link) ? _link : `#${_link}`;
             return `<a href="${_link}">`;
+        };
+
+        // image
+        _markdownit.renderer.rules.image = function (tokens, idx) {
+            let _src = tokens[idx].attrs.reduce((r, attr) => attr[0] === 'src' ? attr[1] : r, null);
+            let _alt = tokens[idx].attrs.reduce((r, attr) => attr[0] === 'alt' ? attr[1] : r, null);
+            return `<div class="image_wrapper"><div class="image"><img src="${_src}" alt="${_alt}"></div></div>`;
         };
 
         let _result = formatResult(_markdownit.render(buffer.toString()), MD_2_HTML_CONFIG);

@@ -272,6 +272,39 @@ input {
     }
 }
 
+.article {
+    .image_wrapper {
+        position: relative;
+        height: 260px;
+        overflow: hidden;
+        width: 100%;
+
+        .image {
+            position: absolute;
+            left: 50%;
+
+            img {
+                position: relative;
+                left: -50%;
+            }
+        }
+    }
+}
+@media screen and (min-width: $breakpoint-md) {
+    .article .image_wrapper {
+        height: auto;
+
+        .image {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
 .page {
     display: flex;
     flex: 1;

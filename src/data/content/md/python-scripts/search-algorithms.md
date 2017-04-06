@@ -11,6 +11,8 @@ python ordered-search.py [data size]
 
 #### results
 
+![vuejs-task-manager-pwa](/assets/screenshots/python-script-search-algorithms.png)
+
 | algorithm   		    | data size	| search	| iterations	| seconds
 | --------------------------------------------------------------------------------
 | linear (for loop)		| 100000000	| 84803807	| 84803807	    | 9.68506
