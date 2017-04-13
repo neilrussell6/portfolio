@@ -1,2 +1,0 @@
-Custom SVG Markers
-==================

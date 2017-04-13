@@ -47,14 +47,21 @@ p,
 input,
 button {
     font-family: "Liberation Mono", Verdana, sans-serif;
-    letter-spacing: 0.05em;
     line-height: 1.5em;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 // ----------------------------------
 // typography
 // ----------------------------------
+
+blockquote {
+    margin: 0 0 $big-v-pad * 2;
+    padding: $med-v-pad $big-h-pad;
+    background-color: rgba(#000, .2);
+    font-size: 18px;
+    color: lighten($text-color-light, 10%);
+}
 
 .logo {
     font-size: 18px;
@@ -114,11 +121,13 @@ h1,
 h2,
 h3,
 h4 {
+    margin-top: $big-v-pad * 2;
     font-family: "Droid Sans", "Trebuchet MS";
     color: $heading-color-light;
     text-shadow: rgba($heading-color-light, .1) 0 10px 10px;
 }
 
+h2,
 h3,
 h4 {
     color: $subheading-color-light;
@@ -272,39 +281,6 @@ input {
     }
 }
 
-.article {
-    .image_wrapper {
-        position: relative;
-        height: 260px;
-        overflow: hidden;
-        width: 100%;
-
-        .image {
-            position: absolute;
-            left: 50%;
-
-            img {
-                position: relative;
-                left: -50%;
-            }
-        }
-    }
-}
-@media screen and (min-width: $breakpoint-md) {
-    .article .image_wrapper {
-        height: auto;
-
-        .image {
-            position: relative;
-
-            img {
-                width: 100%;
-            }
-        }
-    }
-}
-
-
 .page {
     display: flex;
     flex: 1;
@@ -437,13 +413,13 @@ input {
     width: 100%;
     margin-bottom: $med-h-pad;
 
-    @media screen and (min-width: $breakpoint-sm) {
-        margin-bottom: 0;
+    &:first-child .nav-item a {
+        margin-left: 0;
     }
 
     .nav {
-        padding-top: 0;
-        padding-left: $med-h-pad;
+        padding: 0;
+        margin: 0;
     }
 
     .nav-item {
@@ -493,6 +469,7 @@ input {
 
         .sub-nav {
             display: none;
+            margin-left: $med-h-pad;
 
             .nav-item {
                 line-height: 1.5em;
@@ -579,6 +556,10 @@ input {
 // code
 // ----------------------------------
 
+code {
+    color: $light-yellow;
+}
+
 pre {
     background-color: rgba(#000, .1);
     border: 1px solid rgba($light-yellow, .1);
@@ -625,6 +606,62 @@ pre {
     .hljs.language-bash {
         &::before {
             content: 'Bash';
+        }
+    }
+}
+
+// ----------------------------------
+// video / images
+// ----------------------------------
+
+.article {
+
+    .video_wrapper {
+        position: relative;
+        //padding-bottom: 56.25%; /* 16:9 */
+        padding-bottom: 24%;
+        padding-top: 25px;
+        height: 0;
+        margin-bottom: $big-v-pad * 2;
+
+        .video {
+        	position: absolute;
+        	top: 0;
+        	left: 0;
+        	width: 100%;
+        	height: 100%;
+        }
+    }
+
+    .image_wrapper {
+        position: relative;
+        height: 260px;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: $big-v-pad * 2;
+
+        .image {
+            position: absolute;
+            left: 50%;
+
+            img {
+                position: relative;
+                left: -50%;
+            }
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-md) {
+        .image_wrapper {
+            height: auto;
+
+            .image {
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+            }
         }
     }
 }

@@ -3,35 +3,28 @@ search algorithms
 
 ### orderded-search
 
-#### usage
+### usage
 
 ```
 python ordered-search.py [data size]
 ```
 
-#### results
+### results
 
 ![vuejs-task-manager-pwa](/assets/screenshots/python-script-search-algorithms.png)
-
-| algorithm   		    | data size	| search	| iterations	| seconds
-| --------------------------------------------------------------------------------
-| linear (for loop)		| 100000000	| 84803807	| 84803807	    | 9.68506
-| binary (recursive)    | 100000000	| 84803807	| 23	        | 7.22723
-| binary (while loop)	| 100000000	| 84803807	| 23	        | 0.00002
-
 
 ### dir-2-es6-export
 
 > Creates a JavaScript file containing es6 exports for each targeted file in a targeted directory.
 > Also allows target extension to be set.
 
-#### usage
+### usage
 
 ```bash
 python dir-2-es6-export.py [-h] [-e EXT] [-o OUTPUT] [-r REMOVE] src dest
 ```
 
-#### example
+### example
 
 Given this directory structure:
 

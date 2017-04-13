@@ -1,25 +1,28 @@
 Step 3 - Babel, ES6 & SASS
 ==========================
 
-#### Goal
+Goal
+----
 
 To add **Babel** and convert all JavaScript to **ES6** and all CSS to **SASS**.
 
 We will use **GNU Make** to serve Webpack Dev Server.
 
-#### Resources
+Resources
+---------
 
- * [Babel - JavaScript compiler](https://babeljs.io/)
+ * [Babel docs - JavaScript compiler](https://babeljs.io/)
  * [ES6 - 6th release of the ECMAScript language specification](https://babeljs.io/learn-es2015/)
  * [SASS - CSS extension language](http://sass-lang.com/)
- * [GNU Make](https://www.gnu.org/software/make/)
 
-#### Code
+Code
+----
 
 Here's a snapshot of the full project at t  his point:
-[https://github.com/neilrussell6/fancy-counter/tree/0.0.3](https://github.com/neilrussell6/fancy-counter/tree/0.0.3)
+[https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.3](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.3)
 
-#### Code overview
+Code overview
+-------------
 
 So because we now have module loading we can remove the following from our **webpack.config.js**:
 

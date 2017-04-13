@@ -3,7 +3,7 @@ dir-2-es6-export
 
 Creates a JavaScript (ES6) file exporting all the files in given directory recursively. Useful if you are converting or generating a directory of HTML files. I use this script in my portfolio/blog VueJS web-app to generate an export of all the MD files I have converted to HTML, this export file is then used to automatically generate a menu in the VueJS web-app.
 
-#### example usage
+### example usage
 
 To view usage and available options / arguments run the following command:
 

@@ -1,21 +1,25 @@
 Step 5 - Redux state management
 ===============================
 
-#### Goal
+Goal
+----
 
 To add Redux state management to the project.
 
-#### Resources
+Resources
+---------
 
- * [Redux - state management](http://redux.js.org/)
- * [Deep Freeze - recursively freeze objects for testing](https://github.com/substack/deep-freeze)
+ * [Redux docs - state management](http://redux.js.org/)
+ * [Deep Freeze GitHub page - recursively freeze objects for testing](https://github.com/substack/deep-freeze)
 
-#### Code
+Code
+----
 
 Here's a snapshot of the full project at this point:
-[https://github.com/neilrussell6/fancy-counter/tree/0.0.5](https://github.com/neilrussell6/fancy-counter/tree/0.0.5)
+[https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.5](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.5)
 
-#### Code overview
+Code overview
+-------------
 
 Wherever there is functionality in the component that altered the app's state, we wil instead dispatch Redux actions.
 

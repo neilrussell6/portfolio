@@ -1,7 +1,8 @@
 Step 2 - Webpack and Live Reloading
 ===================================
 
-#### Goal
+Goal
+----
 
 To add **Webpack** and configure **Live Reloading**.
 
@@ -10,31 +11,34 @@ Resulting in the following behaviour:
  - When we modify the app's CSS, the page should not reload, instead the css should update without affecting the app's state.
    So if we start the counter, we should be able to edit the css and see the changes reflected in our browser while the counter continues to count.
    This functionality is called hot module replacement.
-   
+
  - But when we modify the app's JavaScript, then the page should reload.
-   We could use [webpack-hot-middleware](https://www.npmjs.com/package/webpack-hot-middleware) to get hot module replacement working with JavaScript changes, 
+   We could use [webpack-hot-middleware](https://www.npmjs.com/package/webpack-hot-middleware) to get hot module replacement working with JavaScript changes,
    but we'd need to add JavaScript to the app specifically for this, which for the purpose of this project is not worth it.
    So for our JavaScript a simple reload on change is sufficient.
 
 We will use **GNU Make** to serve Webpack Dev Server and build for distribution.
 
-#### Resources
+Resources
+---------
 
- * [Webpack - module bundler](https://webpack.github.io/)
- * [Live Reloading](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html).
- * [GNU Make](https://www.gnu.org/software/make/)
+ * [Webpack docs - module bundler](https://webpack.github.io/)
+ * [Webpack Live Reloading docs](https://webpack.github.io/docs/hot-module-replacement-with-webpack.html).
+ * [GNU Make docs](https://www.gnu.org/software/make/)
 
-#### Code
+Code
+----
 
 Here's a snapshot of the full project at this point:
-[https://github.com/neilrussell6/fancy-counter/tree/0.0.2](https://github.com/neilrussell6/fancy-counter/tree/0.0.2)
+[https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.2](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.2)
 
 Webpack Config
---------------
+==============
 
 > We will create 2 webpack config files, one for development and one for production.
 
-#### Development config
+Development config
+------------------
 
 > Our development config will be called `webpack-config.dev.js` and will be used only when serving the project during development.
 
@@ -85,9 +89,9 @@ To get hot module replacement to work for CSS we need update our **webpack.confi
 module.exports = {
     entry: [
         ...
-        'webpack-dev-server/client?http://localhost:8080', 
+        'webpack-dev-server/client?http://localhost:8080',
         // this bundles the client for webpack-dev-server and connects to the provided endpoint
-        
+
         'webpack/hot/only-dev-server',
         // this bundles the client for hot reloading
         // the 'only-' part means to only hot reload for successful updates
@@ -114,8 +118,9 @@ Regarding this Webpack Dev Server docs say this:
 ```--inline``` Inline the webpack-dev-server logic into the bundle.
 
 Makefile changes
-----------------
+================
 
-#### serve
+serve
+-----
 
 > Runs webpack-dev-server with live reloading.

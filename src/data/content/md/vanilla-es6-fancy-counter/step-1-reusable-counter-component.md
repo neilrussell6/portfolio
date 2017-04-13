@@ -1,7 +1,8 @@
 Step 1 - Reusable JavaScript counter component
 ==============================================
 
-#### Goal
+Goal
+----
 
 To create a reusable counter component using plain JavaScript (no ES6) and plain CSS (no SASS or LESS),
 that we can use by placing the following in our HTML:
@@ -14,19 +15,21 @@ We will use **GNU Make** for JavaScript linting and for publishing new releases 
 
 We will add 2 instances of the component to our HTML to ensure the component is reusable and that it's state is instance specific.
 
-#### Resources
+Resources
+---------
 
- * [custom html tags](https://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
- * [self executing anonymous functions](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/)
- * [GNU Make](https://www.gnu.org/software/make/)
+ * [an article on custom html tags](https://www.html5rocks.com/en/tutorials/webcomponents/customelements/)
+ * [an article on self executing anonymous functions](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/)
+ * [GNU Make docs](https://www.gnu.org/software/make/)
 
-#### Code
+Code
+----
 
 Here's a snapshot of the finished code for this step:
-[https://github.com/neilrussell6/fancy-counter/tree/0.0.1](https://github.com/neilrussell6/fancy-counter/tree/0.0.1)
+[https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.1](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.1)
 
 HTML / JavaScript / CSS
------------------------
+=======================
 
 Our counter component will consist of:
 
@@ -52,7 +55,7 @@ Which will allow us to use the component in our index.html.
 <fancy-counter></fancy-counter>
 ```
 
-We'll also get the counter's title from the DOM element's dataset, but fallback to a default incase it's not set. 
+We'll also get the counter's title from the DOM element's dataset, but fallback to a default incase it's not set.
 
 ```javascript
 var _title = dom.el.dataset.title || DEFAULT_TITLE;
@@ -73,13 +76,15 @@ All the component code will be wrapped in a self executing anonymous function, t
 ```
 
 Makefile
---------
+========
 
-#### todo
+todo
+----
 
 > A helpful rule that lists all the `TODO` comments in our source JavaScript.
 
-#### jslint
+jslint
+------
 
 > A rule that lints our source JavaScript.
 
@@ -99,16 +104,18 @@ make jslint WATCH=1
 make jslint SUPPRESS=1 WATCH=1
 ```
 
-#### push
+push
+----
 
-> A rule that performs a few checks before pushing our local repository to Github,
+> A rule that performs a few checks before pushing our local repository to GitHub,
 > which ensures we don't push any un-linted or broken code.
 
 checks:
 
  * no JS lint errors
 
-#### publish
+publish
+-------
 
 > A rule that performs a few checks before creating a new annotated GitHub tag and pushing as a release.
 > Will use package.json version number and MESSAGE (if provided).
