@@ -423,7 +423,7 @@ input {
     }
 
     .nav-item {
-        line-height: 1.5em;
+        line-height: 1.2em;
 
         &.selected {
             .sub-nav {
@@ -614,6 +614,37 @@ pre {
 // video / images
 // ----------------------------------
 
+.clear {
+    clear: both;
+    margin-top: $big-v-pad * 2;
+}
+
+.image_wrapper {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    margin-bottom: $big-v-pad * 2;
+    box-shadow: 0 0 15px rgba(#000, .2);
+}
+
+.body.home {
+
+    .article ul {
+        margin-left: 240px + $big-v-pad * 2;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .image_wrapper {
+        width: 240px;
+        float: left;
+        clear: both;
+        margin-right: $big-v-pad * 2;
+    }
+}
+
 .article {
 
     .video_wrapper {
@@ -634,11 +665,7 @@ pre {
     }
 
     .image_wrapper {
-        position: relative;
-        height: 260px;
-        overflow: hidden;
         width: 100%;
-        margin-bottom: $big-v-pad * 2;
 
         .image {
             position: absolute;

@@ -1,9 +1,9 @@
-VueJS Task Manager PWA
-======================
+Task Manager
+============
 
 > This is your typical Todo / Task manager app, but with a few extras. It's an open source progressive web app with offline / online modes.
 
-![vuejs-task-manager-pwa](/assets/screenshots/vuejs-task-manager-pwa.png)
+![task-manager](/assets/screenshots/task-manager-1.png)
 
  * [View Demo](https://task-manager.neilrussell.co.za)
  * [View Code on GitHub](https://github.com/neilrussell6/vuejs-task-manager)
@@ -32,7 +32,7 @@ Technologies used
 Goal
 ----
 
-A simple, clean & "clutter" free task manager for simple / personal project management.
+A simple, clean & "clutter" free task manager for personal project management.
 
 Roadmap
 -------

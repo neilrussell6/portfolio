@@ -1,6 +1,6 @@
 <template>
 
-    <div class="body">
+    <div class="body" :class="page_name">
 
         <aside class="aside aside-1">
 
@@ -77,6 +77,7 @@
 <script type="text/babel">
 
     import { router } from '../main';
+    import VueRouter from 'vue-router';
 
     // data
     import * as templates from 'data/content/template-map';
@@ -108,6 +109,17 @@
             };
         },
 
+        computed: {
+            page_name: function () {
+
+                if (this.$route.path === '/') {
+                    return 'home';
+                }
+
+                return this.$route.path.replace(/^\//, '').replace(/\//g, '_');
+            }
+        },
+
         methods: {
             _onSelect (link) {
                 this.selected_item_key = link.key;
@@ -119,6 +131,8 @@
             if (_selected_item !== null) {
                 this.selected_item_key = _selected_item.key;
             }
+
+            console.log(this.$route);
         }
     };
 </script>

@@ -37,5 +37,5 @@ Table of contents
     3) [Internal events](vanilla-js-to-framework/js-changes-3-internal-events)
     4) [View Updates](vanilla-js-to-framework/js-changes-4-view-updates)
     5) [Redux](vanilla-js-to-framework/js-changes-5-redux)
- * [Webpack config changes](vanilla-js-to-framework/webpack-config-changes)
- * [Makefile changes](vanilla-js-to-framework/makefile-changes)
+ * Webpack config changes (coming soon...)
+ * Makefile changes (coming soon...)

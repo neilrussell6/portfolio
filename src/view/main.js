@@ -10,7 +10,10 @@ const _routes = menu_utils.formatRoutes(templates);
 
 export const router = new VueRouter({
     // mode: 'history',
-    routes: _routes
+    routes: _routes,
+    scrollBehavior (to, from, savedPosition) {
+        return { x: 0, y: 0 };
+    }
 });
 
 new Vue({

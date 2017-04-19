@@ -1,5 +1,5 @@
 {
-    "html":         false,
+    "html":         true,
     "xhtmlOut":     false,
     "breaks":       false,
     "langPrefix":   "language-",
