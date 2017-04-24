@@ -1,8 +1,7 @@
 Redux
 =====
 
-**NOTE:**
-We won't go into setting up Redux, but here is an overview of the parts our counter component will interact with:
+> NOTE: We won't go into setting up Redux, but here is an overview of the parts our counter component will interact with:
 
  * `'state/store'` - Our app's Redux store
  * `'state/counters/counters.actions'` - The Redux actions for our app's counters
@@ -32,7 +31,7 @@ function onStartCounterClick (local_id) {
     const _state = store.getState();
 
     window.setInterval(function() {
-    
+
         // dispatch Redux action
         store.dispatch(CountersActions.incrementCounter(local_id));
     }, 1000);
@@ -42,18 +41,18 @@ function onCounterAttached (el) {
     ...
 
     const _state = store.getState();
-    
+
     let _instance_data = {
         local_id: el.dataset.localId, // our 'data-local-id' HTML attribute
         el_counter: el.querySelector('.fancy-counter .counter'),
         ...
     }
-    
+
     // add counter to state
     store.dispatch(CountersActions.addCounter(_instance_data));
-    
+
     ...
-    
+
     // just pass instance's local id, becuase that's all our handler will need to dispatch the incremenet counter Redux action
     _el_button_start.addEventListener("click", onStartCounterClick.bind(null, _instance_data.local_id);
 }
@@ -90,7 +89,7 @@ store.subscribe(updateView);
 
         // get counter by this.localId
     }
-    
+
     export default {
         ...
         props: {
@@ -101,7 +100,7 @@ store.subscribe(updateView);
         },
         ...
         mounted: function () {
-        
+
             // create counter state instance
             store.dispatch(CountersActions.addCounter({
                 local_id: this.localId,

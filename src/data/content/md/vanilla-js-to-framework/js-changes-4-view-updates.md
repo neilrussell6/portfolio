@@ -57,15 +57,13 @@ function onCounterAttached (el) {
 
 ### VueJS 2
 
-> [VueJS 2 Custom Events](https://vuejs.org/v2/guide/components.html#Custom-Events)
-
 **FancyCounter.vue**
 
 ```html
 <template>
     <div class="fancy-counter">
         ...
-        {{count}}
+        '{'{'count}}
         ...
     </div>
 </template>
@@ -90,8 +88,8 @@ function onCounterAttached (el) {
 
 ### AngularJS 2
 
-> ...
+...
 
 ### ReactJS
 
-> ...
+...

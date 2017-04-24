@@ -4,7 +4,7 @@ Internal events
 JavaScript Changes
 ------------------
 
-> We want to listen to the click events of our counter's controls. 
+> We want to listen to the click events of our counter's controls.
 
 ### Vanilla JavaScript
 
@@ -17,7 +17,7 @@ const TEMPLATE = '<div class="fancy-counter">' +
     ...
     '</div>';
 
-function onCounterAttached (el) {    
+function onCounterAttached (el) {
     ...
     let _el_button_start: el.querySelector('.fancy-counter .btn-start');
     _el_button_start.addEventListener("click", onStartCounterClick);
@@ -26,7 +26,7 @@ function onCounterAttached (el) {
 
 ### VueJS 2
 
-> [VueJS 2 Custom Events](https://vuejs.org/v2/guide/components.html#Custom-Events)
+* [VueJS 2 Custom Event docs](https://vuejs.org/v2/guide/components.html#Custom-Events)
 
 **FancyCounter.vue**
 
@@ -52,8 +52,8 @@ function onCounterAttached (el) {
 
 ### AngularJS 2
 
-> ...
+...
 
 ### ReactJS
 
-> ...
+...

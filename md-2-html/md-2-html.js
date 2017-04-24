@@ -8,7 +8,10 @@ const MD_2_HTML_CONFIG = require('./md-2-html-config.json');
 const MARKDOWN_IT_CONFIG = require('./markdown-it-config.json');
 const MARKDOWN_IT_VIDEO_CONFIG = require('./markdown-it-video-config.json');
 
-const _markdownit = markdownit(MARKDOWN_IT_CONFIG)
+const _markdownit = markdownit(Object.assign({}, MARKDOWN_IT_CONFIG, {
+    highlight: function (str, lang) {
+        return '<v-pre class="hljs testtest"><code>' + markdownit.utils.escapeHtml(str) + '</code></v-pre>';
+    }}))
     .use(require('markdown-it-code-embed'), CODEPEN_CONFIG)
     .use(require('markdown-it-highlightjs'))
     .use(require('markdown-it-video', MARKDOWN_IT_VIDEO_CONFIG));

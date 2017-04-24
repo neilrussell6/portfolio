@@ -1,5 +1,5 @@
-AWK filter-file
-===============
+AWK script to filter file content
+=================================
 
 > A script that filters the content of a given file using a provided config.
 
@@ -15,8 +15,9 @@ awk -f filter-file.awk config.txt data.txt > output.csv
 Config explained
 ----------------
 
-> The first row contains the values to filter by.
-> The second row contains the column to capture in the result.
+The first row contains the values to filter by.
+
+The second row contains the column to capture in the result.
 
 So the following config:
 
@@ -25,8 +26,9 @@ Johannesburg,London,Bangkok
 longitude,latitude,city
 ```
 
-> Translates to:
-> Grab the following columns (latitude, longitude & city) from all rows with values that match any of these (Johannesburg, London or Bangkok)
+Translates to:
+
+Grab the following columns (latitude, longitude & city) from all rows with values that match any of these (Johannesburg, London or Bangkok)
 
 Example
 -------

@@ -16,18 +16,6 @@ At each step we'll go through the important JavaScript, Webpack & Makefile chang
 
 > NOTE: At the time of writing this project only works in Chrome.
 
-Code
-----
-
-You can get the code for each step of the process at the following locations:
-
-* [Finished project](https://github.com/neilrussell6/vanilla-es6-fancy-counter)
-* [Step 1 - Create a reusable counter component with plain JavaScript & CSS](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.1)
-* [Step 2 - Implement Webpack and configure Hot module replacement](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.2)
-* [Step 3 - Convert to ES6 and SASS](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.3)
-* [Step 4 - Create a counter utility with tests](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.4)
-* [Step 5 - Redux state management](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.5)
-
 Table of contents
 -----------------
 
@@ -61,3 +49,15 @@ Table of contents
 ### [Step 5 - Implement Redux for state management](vanilla-es6-fancy-counter/step-5-redux-state-management):
 
  * Implement Redux for state management.
+
+Code
+----
+
+You can get the code for each step of the process at the following locations:
+
+* [Finished project](https://github.com/neilrussell6/vanilla-es6-fancy-counter)
+* [Step 1 - Create a reusable counter component with plain JavaScript & CSS](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.1)
+* [Step 2 - Implement Webpack and configure Hot module replacement](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.2)
+* [Step 3 - Convert to ES6 and SASS](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.3)
+* [Step 4 - Create a counter utility with tests](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.4)
+* [Step 5 - Redux state management](https://github.com/neilrussell6/vanilla-es6-fancy-counter/tree/v0.0.5)

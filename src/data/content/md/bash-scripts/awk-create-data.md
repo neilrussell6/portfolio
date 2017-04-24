@@ -1,5 +1,5 @@
-AWK create-data
-===============
+AWK script to create data
+=========================
 
 > A script that generates a data file (comma delimited txt or csv file etc), using a provided config. Supports config for auto-incrementing column values, random item from array and random number in range.
 
@@ -12,7 +12,8 @@ Usage
 awk -f create-data.awk config.txt > data.csv rows=1000
 ```
 
-#### Example 1 :: simple config
+Example 1 :: simple config
+--------------------------
 
 Given the following config template:
 
@@ -32,7 +33,8 @@ id,foreign_id,name
 ...
 ```
 
-#### Example 2 :: id variable
+Example 2 :: id variable
+------------------------
 
 Given the following config template:
 
@@ -52,7 +54,8 @@ id,static_fk,name,incrementing_fk,interpolated_incrementing_fk
 ...
 ```
 
-#### Example 3 :: random item from array
+Example 3 :: random item from array
+-----------------------------------
 
 Given the following config template:
 
@@ -72,7 +75,8 @@ id,foreign_id,name,date,price
 ...
 ```
 
-#### Example 4 :: random number in range
+Example 4 :: random number in range
+-----------------------------------
 
 Given the following config template:
 

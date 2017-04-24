@@ -25,7 +25,7 @@ const TEMPLATE = '<div class="fancy-counter">' +
     ...
     '</div>';
 
-function onCounterAttached (el) {    
+function onCounterAttached (el) {
     ...
     let _el_title = el.querySelector('.fancy-counter .title');
     _el_title.innerHTML = el.dataset.title || "Fancy Counter";
@@ -34,7 +34,7 @@ function onCounterAttached (el) {
 
 ### VueJS 2
 
-> [VueJS 2 component props](https://vuejs.org/v2/guide/components.html#Props)
+* [VueJS 2 component prop docs](https://vuejs.org/v2/guide/components.html#Props)
 
 if we want to set it using a literal string:
 
@@ -74,8 +74,8 @@ if we want to set it using a JavaScript variable:
 
 ### AngularJS 2
 
-> ...
+...
 
 ### ReactJS
 
-> ...
+...

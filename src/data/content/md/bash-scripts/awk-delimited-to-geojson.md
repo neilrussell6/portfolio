@@ -1,9 +1,9 @@
-AWK delimited-to-geojson
-========================
+AWK script to convert delimited data to geojson
+===============================================
 
 > An AWK script that converts comma delimited text data to [GEOJSON format](http://geojson.org/).
+
 > Currently supports generating both points for geo-locations and lines connecting geo-locations.
-> NOTE: This is an extension of the filter-file script above.
 
 [View code on GitHub](https://github.com/neilrussell6/bash-scripts/blob/master/delimited-to-geojson/delimited-to-geojson.awk)
 
@@ -18,8 +18,9 @@ awk -v type='LineString' -f delimited-to-geojson.awk city-connections-config.txt
 Config explained
 ----------------
 
-> The first row contains the values to filter by.
-> The second row contains the column to capture in the result.
+The first row contains the values to filter by.
+
+The second row contains the column to capture in the result.
 
 So the following config:
 
@@ -28,8 +29,9 @@ Johannesburg,London,Bangkok
 longitude,latitude,city
 ```
 
-> Translates to:
-> Grab the following columns (latitude, longitude & city) from all rows with values that match any of these (Johannesburg, London or Bangkok)
+Translates to:
+
+Grab the following columns (latitude, longitude & city) from all rows with values that match any of these (Johannesburg, London or Bangkok)
 
 Point Example
 -------------

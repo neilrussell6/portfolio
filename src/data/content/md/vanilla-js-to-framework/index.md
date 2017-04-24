@@ -11,23 +11,6 @@ we will implement various JavaScript frameworks, to compare the JavaScript, Webp
 
 We will use ES6 for each framework (for the sake of consistency).
 
-Resources
----------
-
- * [VueJS 2 docs](https://vuejs.org/)
- * [AngularJS 2 docs](https://angularjs.org/)
- * [ReactJS docs](https://facebook.github.io/react/)
-
-Code
-----
-
-You can get the code for each step of the process at the following locations:
-
- * [Vanilla ES6 Fancy Counter](https://github.com/neilrussell6/vanilla-es6-fancy-counter)
- * [VueJS 2 ES6 Fancy Counter](https://github.com/neilrussell6/vuejs-es6-fancy-counter)
- * AngularJS 2 ES6 Fancy Counter (coming soon)
- * React ES6 Fancy Counter (coming soon)
-
 Table of contents
 -----------------
 
@@ -39,3 +22,20 @@ Table of contents
     5) [Redux](vanilla-js-to-framework/js-changes-5-redux)
  * Webpack config changes (coming soon...)
  * Makefile changes (coming soon...)
+
+Code
+----
+
+You can get the code for each step of the process at the following locations:
+
+ * [Vanilla ES6 Fancy Counter](https://github.com/neilrussell6/vanilla-es6-fancy-counter)
+ * [VueJS 2 ES6 Fancy Counter](https://github.com/neilrussell6/vuejs-es6-fancy-counter)
+ * AngularJS 2 ES6 Fancy Counter (coming soon)
+ * React ES6 Fancy Counter (coming soon)
+
+Resources
+---------
+
+ * [VueJS 2 docs](https://vuejs.org/)
+ * [AngularJS 2 docs](https://angularjs.org/)
+ * [ReactJS docs](https://facebook.github.io/react/)

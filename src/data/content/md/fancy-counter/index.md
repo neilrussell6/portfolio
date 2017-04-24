@@ -21,7 +21,7 @@ Vanilla JavaScript Fancy Counter
 
 Written in Vanilla JavaScript with ES6 and SASS.
 
-```
+```html
 <fancy-counter data-title="Fancy Counter 1" data-local-id="1"></fancy-counter>
 ```
 
@@ -33,7 +33,7 @@ VueJS Fancy Counter
 
 Written in VueJS with ES6 and SASS, and using Redux for state management.
 
-```
+```html
 <fancy-counter title="Fancy Counter 1" local-id="1"></fancy-counter>
 ```
 

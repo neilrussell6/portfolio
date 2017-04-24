@@ -28,7 +28,7 @@ Results
 Algorithms
 ----------
 
-#### linear search (loop)
+### linear search (loop)
 
 ```python
 def linearSearchLoop( data, search_value ):
@@ -39,7 +39,7 @@ def linearSearchLoop( data, search_value ):
     return -1
 ```
 
-#### binary search (loop)
+### binary search (loop)
 
 ```python
 def binarySearchLoop( data, search_value ):
@@ -69,7 +69,7 @@ def binarySearchLoop( data, search_value ):
     return -1
 ```
 
-#### binary search (recursive)
+### binary search (recursive)
 
 ```python
 def binarySearchRecursive( data, search_value, count = 1 ):

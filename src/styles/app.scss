@@ -300,7 +300,7 @@ input {
             rgba(darken($bg-color-med, 4%), .8) 20px
         );
         position: relative;
-        display: flex;
+        display: block;
 
         > .content {
             background-color: rgba(darken($bg-color-med, 4%), .8);
@@ -606,6 +606,18 @@ pre {
     .hljs.language-bash {
         &::before {
             content: 'Bash';
+        }
+    }
+
+    .hljs.language-python {
+        &::before {
+            content: 'Python';
+        }
+    }
+
+    .hljs.language-terminal {
+        &::before {
+            content: 'Terminal';
         }
     }
 }

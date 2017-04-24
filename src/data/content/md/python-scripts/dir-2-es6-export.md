@@ -1,5 +1,5 @@
-dir-2-es6-export
-================
+Directory to ES6 export
+========================
 
 > Creates a JavaScript file containing ES6 exports for all the files in a directory. Works recursively, and allows files to be targeted by extension.
 
@@ -26,13 +26,13 @@ But for example, if we have the following files in a `./src` directory:
 
 And we then run the following script:
 
-```bash
+```terminal
 python dir-2-js-export.py ./src/html -e html -o ./src/template-map.js -r ./src
 ```
 
 It will use the names of all the `html` files in `./src/html` to generate `./src/template-map.js`, and will strip `./src` from all the paths, resulting in an export file (`./src/template-map.js`) that looks like this:
 
-```js
+```javascript
 import _code_examples from "html/code-examples.html";
 import _index from "html/index.html";
 import _sub_dir__sub_page from "html/sub-dir/sub-page.html";

@@ -35,7 +35,7 @@ document.registerElement('fancy-counter', { prototype: _prototype });
 
 ### VueJS 2
 
-> [VueJS 2 component](https://vuejs.org/v2/guide/components.html)
+* [VueJS 2 component docs](https://vuejs.org/v2/guide/components.html)
 
 **FancyCounter.vue**
 
@@ -52,8 +52,8 @@ document.registerElement('fancy-counter', { prototype: _prototype });
 
 ### AngularJS 2
 
-> ...
+...
 
 ### ReactJS
 
-> ...
+...

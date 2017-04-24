@@ -5,7 +5,8 @@ Markdown-it-code-embed
 
 Code embed plugin for [markdown-it](https://github.com/markdown-it/markdown-it) markdown parser. Allows you to add embeds from services like Codepen to your markdown.
 
-### Example Usage
+Example Usage
+-------------
 
 You can provide just the slug hash for your Codepen embed like this:
 
@@ -25,9 +26,10 @@ Or you can provide all the config options (must be valid json, and must be on a 
 @[codepen]({"slug_hash":"ABC", "pen_title":"My Pen"})
 ```
 
-##### Include required embed Javascript
+Remember to include required embed Javascript
+---------------------------------------------
 
-This plugin does not attach the Javascript required by the embed service, so remember to include it.
+This plugin does not attach the Javascript required by for embed service (eg. Codepen embed file), so remember to include it.
 
 Below are the required scripts for each supported service:
 
@@ -49,7 +51,7 @@ md.use(require('markdown-it-code-embed'), {
 });
 ```
 
-#### Codepen options
+### Codepen options
 
  * **class** (default = codepen)
  * **default_tab** (default = result)
@@ -62,6 +64,7 @@ md.use(require('markdown-it-code-embed'), {
  * **user** (default = null)
  * **user_name** (default = null)
  * **palceholder** *accepts variables* (default =
+
 ```html
 See the Pen <a href="https://codepen.io/${user}/pen/${slug_hash}/">${pen_title}</a> by ${user_name} (<a href="http://codepen.io/${user}">@${user}</a>) on <a href="http://codepen.io">CodePen</a>.
 ```
